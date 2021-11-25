@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*ヘッダー＝＝＝＝＝＝＝＝*/
+.header {
+    background-color: #faa61a;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%;
+}
+
+.header_right {
+    display: flex;
+    
+}
+/*共通部分＝＝＝＝＝*/
+
+.container {
+    background-color: #fff8cf;
+    height: calc(100% - 100px);
+    padding: 30px;
+}
+
+.boxs {
+    /*background-color: pink;*/
+    /*padding: 20px;*/
+    
+}
+
+/*トップページ＝＝＝＝＝*/
+.art_box {
+    background-color: #a6ce39;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15% 30px;
+    padding: 20px;
+}
+
