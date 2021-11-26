@@ -1,18 +1,14 @@
+
 <header class="header">
     <div class="header_title"><a href="/">こども作品保存箱</a></div>
     <div class="header_right">
-        <%= link_to "name ently", new_user_path, class: "name_ently" %>
-        <div class="name_select">name select
-            <% @users.each do |user| %>
-                <div class="name_list">
-                   <%= link_to "#{user.name}", user_path(user.id) %>
-                </div>
-            <% end %>
-        </div>
+        <div class="top_back"><a href="/">トップページへ</a></div>
     </div>
 </header>
 
 <div class="contents">
+     <div class="box_title"><%= @name %>の作品集</div>
+        <%= link_to "art new", new_user_art_path(@user.id), class: "art_new"%>
     <div class="boxs">
         <% @arts.each do |art| %>
         <div class="art_box">
@@ -25,6 +21,5 @@
         </div>
         <% end %>
     </div>
-
     
 </div>

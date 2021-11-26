@@ -1,15 +1,17 @@
 class ArtsController < ApplicationController
   def index 
     @arts = Art.all
+    @users = User.all
   end
   
   def new
     @art = Art.new
+    @user = User.find(params[:user_id])
   end
 
   def create
-    Art.create(art_params) # POINT
-    redirect_to "/"
+    art = Art.create(art_params) # POINT
+    redirect_to "/users/#{art.user.id}"
   end
 
   def show
@@ -29,6 +31,6 @@ class ArtsController < ApplicationController
   private 
   
   def art_params
-       params.require(:art).permit(:content, :image, :grade, :title)
+       params.require(:art).permit(:content, :image, :grade, :title).merge(user_id: params[:user_id])
   end
  end

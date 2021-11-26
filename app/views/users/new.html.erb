@@ -1,0 +1,19 @@
+<header class="header">
+    <div class="header_title"><a href="/">こども作品保存箱</a></div>
+    <div class="header_right">
+        <div class="top_back"><a href="/">トップページへ</a></div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="ently_container">
+        <h2 class="sub_title">おなまえ登録</h2>
+         <%= form_with(model: @user, local: true) do |form| %>
+            <%= form.text_field :name, class: "ently_name" %>
+            <%= form.submit "登録", class: "ently_btn" %>
+        <% end %>
+       
+    </div>
+    
+    
+</div>

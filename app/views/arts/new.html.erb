@@ -1,5 +1,12 @@
+<header class="header">
+    <div class="header_title"><a href="/">こども作品保存箱</a></div>
+    <div class="header_right">
+        <div class="top_back"><a href="/">トップページへ</a></div>
+    </div>
+</header>
+
 <h1>作品投稿</h1>
-<%= form_with model: @art, local: true  do |form| %>
+<%= form_with(model: [@user, @art], local: true) do |form| %>
   <%= form.text_field :title %><br>
   <%= form.file_field :image %><br>
   <%= form.text_field :grate %><br>
