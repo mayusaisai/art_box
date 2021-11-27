@@ -7,6 +7,7 @@ class ArtsController < ApplicationController
   def new
     @art = Art.new
     @user = User.find(params[:user_id])
+    @name = @user.name
   end
 
   def create
@@ -23,14 +24,20 @@ class ArtsController < ApplicationController
   end
 
   def update
-    art = Art.find(params[:id])
+    art = Art.find(params[:user_id])
     art.update(art_params) # POINT
+    
+  end
+  
+  def destory
+    art = Art.find(params[:id])
+    art.destroy
     redirect_to "/"
   end
   
   private 
   
   def art_params
-       params.require(:art).permit(:content, :image, :grade, :title).merge(user_id: params[:user_id])
+       params.require(:art).permit(:content, :image, :grate, :title).merge(user_id: params[:user_id])
   end
  end

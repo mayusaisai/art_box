@@ -15,6 +15,7 @@ class UsersController < ApplicationController
         @arts = @user.arts
       end
       
+      
       private 
       
       def user_params

@@ -22,7 +22,7 @@ ul {
     height: 100px;
     display: flex;
     justify-content: space-between;
-    padding: 0 15%;
+    padding: 0 16%;
 }
 
 .header_right {
@@ -35,13 +35,17 @@ ul {
 }
 
 .name_ently,
-.name_select {
-    height: 70px;
-    width: 70px;
-    margin: 15px;
-    padding: 10px;
+.name_select,
+.top_back {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    padding: 15px;
     align-items: center;
-    border: 1px solid #000;
+    line-height: 20px;
+    border: 1px solid #8a4121;
+    box-shadow: 2px 2px  #8a4121;
+    
 }
 
  /*なまえリスト　プルダウン＝＝＝＝＝*/
@@ -52,7 +56,7 @@ ul {
 /*共通部分＝＝＝＝＝*/
 .contents {
     background-color: #fff8cf;
-    height: calc(100% - 100px);
+    /*height: calc(100% - 100px);*/
     padding: 30px;
 }
 .container {
@@ -61,22 +65,142 @@ ul {
     padding: 30px;
 }
 
-.boxs {
-    /*background-color: pink;*/
-    /*padding: 20px;*/
-    
+.sub_title {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 /*トップページ＝＝＝＝＝*/
+.boxs {
+    /*background-color: pink;*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*margin: 0 15% 30px;*/
+}
 .art_box {
-    background-color: #a6ce39;
     display: flex;
     justify-content: space-around;
-    margin: 0 20% 30px;
+    background-color: #a6ce39;
+    margin: 0 15% 30px;
     padding: 20px;
+    box-shadow: 5px 5px #ced1b3;
+}
+
+.left_title {
+    font-size: 30px;
+    margin: 10px 0;
+}
+.left_grate {
+    font-size: 14px;
+    margin:0 0 20px 30px;
+    
+}
+.left_name,
+.left_content {
+    font-size: 20px;
+    margin:0 0 30px 30px;
+}
+.art_right {
+    height: 300px;
+    width: 300px;
 }
 
 /*なまえ登録ページ＝＝＝*/
 .ently_container {
     background-color: #a6ce39;
+    height: 300px;
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 5px 5px #ced1b3;
 }
+
+.ently_name {
+    height: 40px;
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.ently_btn,
+.art_btn {
+    background-color: #faa61a;
+    height: 40px;
+    width: 100px;
+    margin-bottom: 30px;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px #8a4121;
+    cursor: pointer;
+}
+
+.ently_btn_box,
+.art_btn_grit {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*個別一覧ページ＝＝＝＝＝*/
+.new_art_box {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.box_title {
+    font-size: 20px;
+    color: black;
+    margin-right: 100px;
+}
+.art_new {
+    background-color: #faa61a;
+    height: 80px;
+    width: 80px;
+    /*margin-right: 15%;*/
+    padding: 10px;
+    align-items: center;
+    border: 1px solid #000;
+    line-height: 18px;
+     border: 1px solid #ced1b3;
+    box-shadow: 2px 2px #8a4121;
+}
+
+/*作品投稿＝＝＝＝＝*/
+.art_container {
+    background-color: #a6ce39;
+    height: 600px;
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 5px 5px #ced1b3;
+}
+.art_title,
+.art_grate,
+.art_content {
+    height: 40px;
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.art_title {
+    width: 400px;
+}
+.art_image {
+    margin-bottom: 30px;
+}
+
+
+.art_grate {
+    width: 50px;
+}
+
+.art_content {
+    height: 80px;
+    width: 400px;
+}
+
+ 

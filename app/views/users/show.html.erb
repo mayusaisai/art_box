@@ -2,22 +2,44 @@
 <header class="header">
     <div class="header_title"><a href="/">こども作品保存箱</a></div>
     <div class="header_right">
-        <div class="top_back"><a href="/">トップページへ</a></div>
+        <div class="top_back"><a href="/">top page</a></div>
     </div>
 </header>
 
 <div class="contents">
-     <div class="box_title"><%= @name %>の作品集</div>
-        <%= link_to "art new", new_user_art_path(@user.id), class: "art_new"%>
+    <div class="new_art_box">
+         <div class="box_title">🌼<%= @name %>の作品集🌼</div>
+         <div class="art_new">
+           <%= link_to "作品 登録 ボタン", new_user_art_path(@user.id) %>
+         </div>
+    </div>
+    
     <div class="boxs">
         <% @arts.each do |art| %>
         <div class="art_box">
             <div class="art_left">
+                <div class="left_title">
                 <%= art.title %>
+                </div>
+                <div class="left_grate">
+                <%= art.grate %>年生の作品
+                </div>
+                <div class="left_content">
+                <%= art.content %>
+                </div>
+                <!--<div class="left_btn">-->
+                <!--    <div class="btn_edit">-->
+                <!--         <%= link_to "編集", edit_user_art_path(:user_id) %>-->
+                <!--    </div>-->
+                <!--    <div class="btn_delete">-->
+                <!--         <%= link_to "削除", "/users/#{:user_id}/arts", method: :delete %>-->
+                <!--    </div>-->
+                <!--</div>-->
             </div>
             <div class="art_right">
                 <%= image_tag art.image %>
             </div>
+            
         </div>
         <% end %>
     </div>
