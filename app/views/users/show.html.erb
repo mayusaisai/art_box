@@ -27,14 +27,15 @@
                 <div class="left_content">
                 <%= art.content %>
                 </div>
-                <!--<div class="left_btn">-->
-                <!--    <div class="btn_edit">-->
-                <!--         <%= link_to "編集", edit_user_art_path(:user_id) %>-->
-                <!--    </div>-->
-                <!--    <div class="btn_delete">-->
-                <!--         <%= link_to "削除", "/users/#{:user_id}/arts", method: :delete %>-->
-                <!--    </div>-->
-                <!--</div>-->
+                <div class="left_btn">
+                    <div class="btn_edit">
+                         <%= link_to "編集", edit_user_art_path(art.user_id, art.id) %>
+                    </div>
+                     
+                    <div class="btn_delete">
+                         <%= link_to "削除", user_art_path(art.user_id, art.id), method: :delete %>
+                    </div>
+                </div>
             </div>
             <div class="art_right">
                 <%= image_tag art.image %>

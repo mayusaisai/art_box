@@ -9,7 +9,7 @@
 <div class="container">
     <div class="art_container">
         <h2 class="sub_title">
-        <%= "#{@name}の作品編集" %>
+    <%= "#{@name}の作品編集" %>
         </h2>
         <%= form_with(model: [@user, @art], local: true) do |form| %>
           <%= form.text_field :title, placeholder: "タイトル", class: "art_title" %><br>
@@ -19,8 +19,8 @@
           </div>
           <%= form.text_area :content, placeholder: "コメント",class: "art_content" %><br>
           <div class="art_btn_grit">
-            <%= form.submit "収納", class: "art_btn" %>
+            <%= form.submit "編集", class: "art_btn" %>
           </div>
-<% end %>
+    <% end %>
     </div>
 </div>

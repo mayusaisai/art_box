@@ -20,17 +20,20 @@ class ArtsController < ApplicationController
   end
 
   def edit
-    @art = Art.find(params[:id]) 
+    @art = Art.find_by(params[:user_id],params[:id])
+    
+    @user = @art.user
+    @name = @user.name
   end
 
   def update
-    art = Art.find(params[:user_id])
+    art = Art.find_by(params[:user_id],params[:id])
     art.update(art_params) # POINT
-    
+    redirect_to "/"
   end
   
-  def destory
-    art = Art.find(params[:id])
+  def destroy
+    art = Art.find_by(params[:user_id],params[:id])
     art.destroy
     redirect_to "/"
   end
